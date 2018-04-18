@@ -76,3 +76,13 @@ void Locomotive::inverserSens()
 {
     inverser_sens_loco(_numero);
 }
+
+void Locomotive::initialisation(int numero, int vitesse, int contactAvant,
+                                      int contactArriere, const QString &message){
+    fixerNumero(numero);
+    fixerVitesse(vitesse);
+    fixerPosition(contactAvant, contactArriere);
+    allumerPhares();
+    demarrer();
+    afficherMessage(message);
+}

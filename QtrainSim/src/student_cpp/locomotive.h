@@ -68,6 +68,16 @@ public:
     //! Change le sens de marche de la locomotive.
     void inverserSens();
 
+    /** Initialise la locomotive avec ses paramètres initiaux et la démarre
+     * @param numero Numero de la locomotive.
+     * @param vitesse Vitesse de la locomotive
+     * @param contactAvant Contact vers lequel la locomotive va se diriger.
+     * @param contactArrier Contact a l'arriere de la locomotive.
+     * @param message Message a afficher
+     */
+    void initialisation(int numero, int vitesse, int contactAvant,
+                              int contactArriere, const QString &message);
+
 private:
     int _numero;
     int _vitesse;
